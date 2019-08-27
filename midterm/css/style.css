@@ -1,0 +1,92 @@
+/* 
+=================================
+This is the reset for whole tags
+=================================
+*/
+
+* {
+    margin: 0px;
+}
+
+/* 
+=================================
+This is for container tags
+=================================
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+#container {
+    width: 100%;
+}
+
+
+/* 
+=================================
+This is the reset for first tags
+=================================
+*/
+
+#first {
+    background: url("../img/rocky-coast-4398331_1920.jpg") center center fixed no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1200px;   
+}
+.nav {
+    width: 500px;
+    position: fixed;
+    top: 50px;
+    right: 100px;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    padding: 10px;
+    color: white;
+}
+li {
+    display: inline-block;
+    width: 100px;
+
+}
+
+/* 
+=================================
+This is for second page
+=================================
+*/
+
+#second {
+    background-color: rgb(187,184,184);
+    width: 100%;
+    height: 1200px;   
+}
+
+/* 
+=================================
+This is for third page
+=================================
+*/
+
+#third {
+    background-color: black;
+    width: 100%;
+    height: 1200px;   
+}
+
+/* 
+=================================
+This is for fouth page
+=================================
+*/
+
+#fourth {
+    background-color: grey;
+    width: 100%;
+    height: 1200px;   
+}

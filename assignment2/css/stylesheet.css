@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 画面を小さくすると左の写真が見切れる。 */
+}
+
+.desserts {
+    display: flex;
+    overflow: hidden;
+}
+
+.dessert {
+    margin: 0px 20px;
+    width: 200px;
+    height: 200px;
+    transition: all 1s;
+}
+
+.dessert img, .discription {
+    width: 200px;
+    height: 200px;
+}
+
+.heading {
+    text-align: center;
+    margin: 0px auto;
+    border-bottom: 1px solid black;
+    color: rgb(175, 132, 22);
+    width: 80%
+}
+
+p {
+    margin-top: 10px;
+}
+
+.dessert:hover {
+    transform: translateY(-200px);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <style>
+        #positioning {
+            background-color: skyblue;
+            border: 5px solid red;
+            width: 90%;
+            margin: 100px auto;
+            padding: 30px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid white;
+            float: left;
+            margin-right: 30px;
+            position: relative;
+            top: -300px;
+            transition: ease-in 2s
+            /* ease-in: slow-go-slow */
+        }
+        img:hover {
+            transform: rotate(30deg) translateY(300px);
+        }
+
+        p {
+            font-size: 2.4em;
+        }
+    </style>
+    <title>Positioning</title>
+</head>
+<body>
+    <div id="positioning">
+        <img src="./img/tongariro-4328719_1920.jpg" alt="mountain">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed risus lacus. Nullam faucibus feugiat ipsum vitae imperdiet. Donec justo eros, gravida et dignissim quis, egestas pharetra eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut porta interdum ultrices. Proin lobortis dolor viverra sem auctor, vel placerat nulla pretium. Nulla facilisi. Sed tempus arcu dui, non mollis tellus porttitor eu. Aenean malesuada, erat at mattis ullamcorper, turpis ligula luctus neque, sit amet congue massa turpis in metus. Pellentesque purus magna, tristique ac libero a, rutrum ultrices orci. Integer ac est id mi dictum ullamcorper. Morbi at tellus augue. Suspendisse vehicula massa in sapien vulputate viverra. Etiam vitae sem sit amet mauris scelerisque venenatis. Cras a nunc at lectus elementum fermentum.</p>
+    </div>
+</body>
+</html>

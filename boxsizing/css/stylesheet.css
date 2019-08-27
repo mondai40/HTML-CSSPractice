@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    height: 60px;
+    background-color: skyblue;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav {
+    background-color: pink;
+    height: 60px;
+}
+li {
+    border: 1px solid red;
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+    list-style: none;
+}
+
+main {
+    height: 60px;
+    background-color: lightgreen;
+    line-height: 60px;
+    text-align: center;
+}
+
+section {
+    height: 60px;
+    background-color: lightgray;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav, main, section, footer {
+    float: left;
+}
+
+
+
+footer {
+    height: 60px;
+    background-color: lightsalmon;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav::after, main::after, section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/* main {
+    float: right;
+}
+section {
+    float: left;
+}
+nav, main, contact::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
+
+/* For mobile phones: */
+[class*="col-"] {    
+    width: 100%;
+}
+
+@media(min-width: 480px) {
+    .col-1-md {width: 8.33%;}
+    .col-2-md {width: 16.66%;}
+    .col-3-md {width: 25%;}
+    .col-4-md {width: 33.33%;}
+    .col-5-md {width: 41.66%;}
+    .col-6-md {width: 50%;}
+    .col-7-md {width: 58.33%;}
+    .col-8-md {width: 66.66%;}
+    .col-9-md {width: 75%;}
+    .col-10-md {width: 83.33%;}
+    .col-11-md {width: 91.66%;}
+    .col-12-md {width: 100%;}
+}
+
+@media(min-width: 728px) {
+    .col-1-lg {width: 8.33%;}
+    .col-2-lg {width: 16.66%;}
+    .col-3-lg {width: 25%;}
+    .col-4-lg {width: 33.33%;}
+    .col-5-lg {width: 41.66%;}
+    .col-6-lg {width: 50%;}
+    .col-7-lg {width: 58.33%;}
+    .col-8-lg {width: 66.66%;}
+    .col-9-lg {width: 75%;}
+    .col-10-lg {width: 83.33%;}
+    .col-11-lg {width: 91.66%;}
+    .col-12-lg {width: 100%;}
+}

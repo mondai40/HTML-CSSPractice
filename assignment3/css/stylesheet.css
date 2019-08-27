@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* sky css start */
+.sky {
+    height: 70%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, dodgerblue, skyblue);
+    position: absolute;
+    top: 0px;
+}
+/* sky css end */
+
+/* sun css start */
+.sun {
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(135deg,darkred, red, orange);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-50%, -50%);
+}
+/* sun css end */
+
+/* cloud css start */
+.cloud {
+    width: 70px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    border-radius: 20px 50%;
+    transform: rotate(-45deg)
+}
+.c1 {left: 180px;}
+.c2 {left: 220px;}
+.c3 {left: 260px;}
+.c4 {left: 300px;}
+.c5 {left: 340px;} 
+/* cloud css start
+
+/* airplane css start */
+.airplane img {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    animation: airplaneCrash 3s ease-out 0s 1 normal none;
+}
+
+@keyframes airplaneCrash {
+    100% {
+        opacity: 1;
+        transform: translate(-750px, 750px);
+    }
+}
+/* airplane css start */
+
+/* ocean css start */
+.ocean {
+    height: 30%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, blue, lightblue);
+    position: absolute;
+    bottom: 0px;
+    animation: oceanAnimation 4s ease 0s infinite alternate none;
+}
+
+@keyframes oceanAnimation {
+    0% {transform: translate(0%, 10%);}
+    100% {transform: translate(0%, -10%);}
+}
+/* airplane css start */
+

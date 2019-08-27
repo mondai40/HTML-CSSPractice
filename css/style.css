@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    /* background-color: blue; */
+    background: url("../img/rocky-coast-4398331_1920.jpg") center center fixed no-repeat;
+    background-size: cover
+}
+
+li {
+    color: black;
+    list-style: none;
+    width: 150px;
+    background-color: yellow;
+    border: 1px solid white;
+    line-height: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    /* display: inline-block; */
+    width: 200px;
+    float: left;
+}
+
+ul li ul li {
+    display: none;
+    transition: all 0.5s;
+}
+
+ul li:hover ul li {
+    display: block;
+    opacity: 0.7;
+    background-color: rgba(255, 0, 0,5);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}

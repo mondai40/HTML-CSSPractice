@@ -1,0 +1,174 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+div#outer {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-gap: 0px;
+    grid-template-areas:
+        "header header header header"
+        "icon title button aside"
+        "icon description1 description1 aside"
+        "icon image1 description2 aside"
+        "icon image1 image2 aside"
+        "icon description3 description4 aside"
+        "icon description5 description5 aside"
+        "icon description6 description7 aside"
+        "icon image3 image3 aside"
+        "footer footer footer footer";
+}
+
+[class*="inner"] {
+    /* border: 1px solid black; */
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+/******* header css start *******/
+header.inner1 {
+    grid-area: header;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    display: flex;	
+    justify-content: space-between;
+    color: white;
+    border-radius: 0px;
+}
+.logo {
+    width: 18%;
+    padding: 10px;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+header li {
+    list-style: none;
+    margin: 0px 10px;
+    padding: 2px 8px;
+    background-color: rgb(147, 90, 231);
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+/******* header css end *******/
+
+/******* icon css end *******/
+div.icons {
+    grid-area: icon;
+    background-color: #FAFBFD;
+}
+.icon {
+    width: 60%;
+    margin: 30px auto;
+    box-shadow: 2px 2px 10px 2px rgb(220, 222, 224); 
+}
+/******* icon css end *******/
+
+div.title {
+    grid-area: title;
+    color: #AD78FB;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+}
+div.inner4 {
+    grid-area: button;
+}
+aside.inner5 {
+    grid-area: aside;
+    background-color: #FAFBFD;
+}
+aside img {
+    width: 20%;
+}
+div.inner6 {
+    grid-area: description1;
+}
+
+
+div.inner7 {
+    grid-area: image1;
+}
+div.inner7 img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+div.inner8 {
+    grid-area: description2;
+    color: #AD78FB;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 130px;
+}
+
+
+div.inner9 {
+    grid-area: image2;
+}
+div.inner9 img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+div.inner10 {
+    grid-area: description3;
+}
+
+
+div.inner11 {
+    grid-area: description4;
+}
+
+
+div.inner12 {
+    grid-area: description5;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    color: white;
+    padding: 20px 160px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+div.inner13 {
+    grid-area: description6;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    color: white;
+    padding: 20px;
+}
+div.inner13 li {
+    border-bottom: 1px solid #9558F3;
+    list-style: none;
+    padding: 10px;
+}
+
+
+div.inner14 {
+    grid-area: description7;
+}
+
+
+div.inner15 {
+    grid-area: image3;
+}
+div.inner15 img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+footer.inner16 {
+    grid-area: footer;
+    background-image: linear-gradient(90deg, #8849E9,#AD78FB);
+    color: white;
+    text-align: center;
+    padding: 18px 0px;
+    font-size: 1rem;
+}
+
