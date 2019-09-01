@@ -1,0 +1,14 @@
+html, body {
+    position: relative;
+}
+
+#ham-menu {
+    /* background-color: #fff; */
+    background-color: #abc;
+    box-sizing: border-box;
+    height: 100%;
+    width: 300px;
+    padding: 10px 40px;
+    position: absolute;
+    top: 0px;
+}
