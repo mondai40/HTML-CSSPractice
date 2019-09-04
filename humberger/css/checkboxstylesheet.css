@@ -1,0 +1,10 @@
+#ham-menu {
+    background-color: red;
+    box-sizing: border-box;
+    height: 100%;
+    width: 300px;
+    padding: 10px 40px;
+    /* position: fixed; */
+    top: 0px;
+    z-index: 1000;
+}
