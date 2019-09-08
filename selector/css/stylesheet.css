@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+div {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.comma:active + h1 {
+    background-color: red;
+}
+
+/* .whiteSpace:active div p {
+    background-color: red;
+} */
+
+.children + p {
+    color:  red;
+}
