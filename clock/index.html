@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analog clock</title>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="400px" style="background-color: #333"></canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d"); //get whole canvas
+        var radius = canvas.height / 2; //radius = 200
+        ctx.translate(radius, radius); // this is epicenter of circle
+        radius = radius * 0.90; // 200 * 0.9 = 180 this is actual radius
+        drawClock();
+
+        function drawClock() {
+            drawFace(ctx, radius);
+        }
+
+        function drawFace(ctx, radius) {
+            var grad;
+
+            ctx.beginPath(); //start or reset point
+            ctx.arc(0, 0, radius, 0, 2 * Math.PI); //(x, y, radius, start, end)
+            ctx.fillStyle = "white"; //background color;
+            ctx.fill(); //draw?
+
+            //the ridge
+            grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+                    //the difference between (radius * 1.05) and (radius * 0.95) will be the edge
+            grad.addColorStop(0, "#333"); //inside of the ridge
+            grad.addColorStop(0.5, "white"); //the middle of the ridge
+            grad.addColorStop(1, "#333"); //the outside of the ridge
+            ctx.strokeStyle = grad; //apply the grad setting to ctx
+            ctx.lineWidth = radius * 0.1;
+            ctx.stroke();
+
+            //the epicenter
+            ctx.beginPath();
+            ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+            ctx.fillStyle = "#333";
+            ctx.fill();
+        }
+    </script>
+</body>
+</html>
