@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200px" height="100px" style="border: 1px solid black;"></canvas>
+    <script>
+    var canvas = document.getElementById("myCanvas");   //find the canvas element
+    var ctx = canvas.getContext("2d");                  //create a drawing object(this and the above are a set)
+    //Draw on the canvas
+    ctx.fillStyle = "#ff0000";
+    ctx.fillRect(0, 0, 150, 75);
+    
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(175, 75, 25, 0, 2 * Math.PI);
+    ctx.stroke();
+    </script>
+</body>
+</html>
