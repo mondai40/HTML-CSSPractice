@@ -1,0 +1,204 @@
+/* 
+.default
+.normal
+.info
+.warning
+.primary
+.Secondary
+.thirdary
+ */
+
+p.default {
+    color: #004085;
+    background-color: #cce5ff
+}
+p.normal {
+    color: #383d41;
+    background-color: #e2e3e5;
+}
+p.info {
+    color: #155724;
+    background-color: #d4edda;
+}
+p.warning {
+    color: #721c24;
+    background-color: #f8d7da;
+}
+p.primary {
+    color: #856404;
+    background-color: #fff3cd;
+}
+p.Secondary {
+    color: #0c5460;
+    background-color: #d1ecf1;
+}
+p.thirdary {
+    color: #818182;
+    background-color: #fefefe;
+}
+
+
+.btn {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn:hover {
+    opacity: 1.0;
+    transition: all .15s;
+}
+button.default {
+    color: #fff;
+    background-color: #0069d9;
+}
+button.normal {
+    color: #fff;
+    background-color: #6c757d;
+}
+button.info {
+    color: #fff;
+    background-color: #28a745;
+}
+button.warning {
+    color: #fff;
+    background-color: #dc3545;
+}
+button.primary {
+    color: #212529;
+    background-color: #ffc107;
+}
+button.Secondary {
+    color: #fff;
+    background-color: #17a2b8;
+}
+button.thirdary {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+h1.default {
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.normal {
+    font-size: 5.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.info {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.warning {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.primary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.Secondary {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1.thirdary {
+    font-size: 0.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+input.default {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.normal {
+    padding: .5rem .75rem;
+    font-size: 1.00rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.info {
+    padding: .75rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.warning {
+    padding: 1rem 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.primary {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.Secondary {
+    padding: 1.5rem 1.75rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.thirdary {
+    padding: 1.75rem 2rem;
+    font-size: 2.25rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.passwordBox {
+    padding: 2rem 2.25rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+input.emailBox {
+    padding: 2.25rem 2.5rem;
+    font-size: 2.75rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+
+li.default {
+    color: #004085;
+    background-color: #b8daff;
+}
+li.normal {
+    color: #383d41;
+    background-color: #d6d8db;
+}
+li.info {
+    color: #155724;
+    background-color: #c3e6cb;
+}
+li.warning {
+    color: #721c24;
+    background-color: #f5c6cb;
+}
+li.primary {
+    color: #856404;
+    background-color: #ffeeba;
+}
+li.Secondary {
+    color: #0c5460;
+    background-color: #bee5eb;
+}
+li.thirdary {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+li.passwordBox {
+    color: #1b1e21;
+    background-color: #c6c8ca;
+}
+li.emailBox {
+    color: #2b4471;
+    background-color: #d3be95;
+}
