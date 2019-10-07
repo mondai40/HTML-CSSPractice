@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>The accesskey attribute is like a keyboard shortcut</p>
+    <button accesskey="a" onclick="showMessage()">This button has accesskey&equals;&OpenCurlyDoubleQuote;a&CloseCurlyDoubleQuote;</button>
+    <p id="message"></p>
+    <img src="./img/otherkeysWithaccesskey.png" alt="other key lists" width="500px">
+    <p>So, if you use Google chrome on Mac, you have to type "Control + Option + a".</p>
+    <script>
+        function showMessage() {
+            let message = document.getElementById("message");
+            message.innerHTML = "The button was clicked.";
+        }
+    </script>
+</body>
+</html>
