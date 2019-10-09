@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <audio id="player" controls></audio> -->
+    <button type="button" onclick="askRecording()">START</button>
+    <button type="button" onclick="endRecording()">END</button>
+<script>  
+    var player = document.getElementById('player');
+
+    function askRecording() {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(startRecording)
+    }
+    function startRecording() {
+        MediaRecorder.start()
+    }
+
+
+
+//   var handleSuccess = function(stream) {
+//     if (window.URL) {
+//       player.src = window.URL.createObjectURL(stream);
+//     } else {
+//       player.src = stream;
+//     }
+//   };
+
+  
+</script>
+</body>
+</html>
