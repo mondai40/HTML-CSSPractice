@@ -7,30 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <audio id="player" controls></audio> -->
-    <button type="button" onclick="askRecording()">START</button>
-    <button type="button" onclick="endRecording()">END</button>
-<script>  
-    var player = document.getElementById('player');
+    
+    <script>
+        //get permission to mic and start recording
+        navigator.mediaDevices.getUserMedia({audio: true})
+            .then(stream => {
+                const mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.start();
 
-    function askRecording() {
-        navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(startRecording)
-    }
-    function startRecording() {
-        MediaRecorder.start()
-    }
+                //collect audio data
+                const audioChunks = [];
+                mediaRecorder.addEventListener("dataavailable", event => {
+                    audioChunks.push(event.data);
+                });
 
+                mediaRecorder.addEventListener("stop", () => {
+                    const audioBlob = new Blob(audioChunks);
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const audio = new Audio(audioUrl);
+                    audio.play();
+                });
 
-
-//   var handleSuccess = function(stream) {
-//     if (window.URL) {
-//       player.src = window.URL.createObjectURL(stream);
-//     } else {
-//       player.src = stream;
-//     }
-//   };
-
-  
-</script>
+                //stop recording
+                setTimeout(() => {
+                    console.log("stop");
+                    mediaRecorder.stop();
+                }, 3000);
+            });
+    </script>
 </body>
 </html>
