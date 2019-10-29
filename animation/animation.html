@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG test</title>
+    <style>
+        .arrow {
+            fill: red;
+            stroke: blue;
+            width: 300px;
+        }
+
+        #arrowPath {
+            stroke-dasharray: 110;
+            stroke-dashoffset: 0;
+            animation: strokeAnimation 2s linear infinite;
+        }
+        @keyframes strokeAnimation {
+            from {
+                stroke-dashoffset: 110;
+            }
+            end {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg class="arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path id="arrowPath" d="M31 16l-15-15v9h-16v12h16v9z"></path>
+        <circle r="1" fill="blue">
+            <animateMotion dur="1.96s" repeatCount="indefinite">
+                <mpath xlink:href="#arrowPath" />
+            </animateMotion>
+        </circle>
+    </svg>
+</body>
+</html>
