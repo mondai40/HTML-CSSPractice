@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">BOX</div>
+
+    <script>
+        const box = document.getElementById("box");
+        
+        let count = 0;
+
+        function animate() {
+            console.log("Time!", new Date().getMilliseconds());
+
+            count += 10;
+            let frame;
+
+            box.style.transform = `translateX(${count}px)`;
+
+            if (count > 500) {
+                window.cancelAnimationFrame(frame);
+            } else {
+                frame = window.requestAnimationFrame(animate);
+            }
+        }
+
+        animate();
+
+    </script>
+</body>
+</html>

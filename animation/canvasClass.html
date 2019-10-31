@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        class Circle {
+            constructor(x, y) {
+                this.circleX = x;
+                this.circleY = y;
+
+                this.directionX = 5;
+                this.directionY = 5;
+            }
+
+            animate() {
+                ctx.clearRect(0, 0, innerWidth, innerHeight); //.clearRect(x, y, width, heigh)
+
+                if (this.circleX > innerWidth - 50  || this.circleX < 50) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.circleY > innerHeight - 50 || this.circleY < 50) {
+                    this.directionY = -this.directionY;
+                }
+
+                this.circleX += this.directionX;
+                this.circleY += this.directionY;
+                ctx.beginPath(); //alway start from .beginPath and end at .stroke()
+                    ctx.arc(this.circleX, this.circleY, 50, 0, Math.PI * 2, false); //.arc(x, y, radius, startAngle, counterClockwise?)
+                ctx.stroke(); //alway start from .beginPath and end at .stroke()
+            
+                window.requestAnimationFrame(() => this.animate());
+            }
+        }
+
+
+        const canvas = document.getElementById("myCanvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const ctx = canvas.getContext("2d");
+
+        for (let i = 0; i < 100; i++) {
+            let randomX = Math.random() * (innerWidth - 50);
+            let randomY = Math.random() * (innerHeight - 50);
+            let circleName = [];
+            circleName[i] = new Circle(randomX, randomY);
+            circleName[i].animate();
+        }
+
+    </script>
+</body>
+</html>

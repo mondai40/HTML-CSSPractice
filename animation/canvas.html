@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        //1. make canvas
+        let canvas = document.getElementById("myCanvas");
+        canvas.width = window.innerWidth; //browser screen width
+        canvas.height = window.innerHeight;
+
+        //2. spell
+        let ctx = canvas.getContext("2d");
+
+        // //3. do whatever you want
+        // //make a rectangle
+        // ctx.fillStyle = "red"; //should write this first
+        // ctx.fillRect(10, 10, 50, 50); //fillRect(x, y, width, height)
+        // ctx.fillStyle = "blue"; //should write this first
+        // ctx.fillRect(50, 50, 50, 50); //fillRect(x, y, width, height)
+
+        // //make a line
+        // ctx.beginPath(); //alway start from .beginPath and end at .stroke()
+        //     ctx.strokeStyle = "green";
+        //     ctx.lineWidth = 2;
+        //     ctx.moveTo(300, 0); //start point
+        //     ctx.lineTo(400, 500); //end point
+        //     ctx.lineTo(300, 500); //next end point
+        // ctx.stroke(); //alway start from .beginPath and end at .stroke()
+
+        // //make a circle
+        // ctx.beginPath(); //alway start from .beginPath and end at .stroke()
+        //     ctx.arc(300, 500, 50, 0, Math.PI * 2, false); //.arc(x, y, radius, startAngle, counterClockwise?)
+        // ctx.stroke(); //alway start from .beginPath and end at .stroke()
+        
+
+        // let x;
+        // let y;
+        // for (let i = 0; i < 100; i++) {
+        //     x = Math.random() * window.innerWidth;
+        //     y = Math.random() * window.innerHeight;
+        //     ctx.beginPath(); //alway start from .beginPath and end at .stroke()
+        //     ctx.strokeStyle = "red";
+        //     ctx.arc(x, y, 50, 0, Math.PI * 2, false); //.arc(x, y, radius, startAngle, counterClockwise?)
+        //     ctx.stroke(); //alway start from .beginPath and end at .stroke()
+        // }
+
+        let circleX = 200;
+        let circleY = 200;
+        let directionX = 5;
+        let directionY = 5;
+        function animate() {
+            ctx.clearRect(0, 0, innerWidth, innerHeight); //.clearRect(x, y, width, heigh)
+
+            if (circleX > innerWidth - 50  || circleX < 50) {
+                directionX = -directionX;
+            }
+            if (circleY > innerHeight - 50 || circleY < 50) {
+                directionY = -directionY;
+            }
+
+            circleX += directionX;
+            circleY += directionY;
+            ctx.beginPath(); //alway start from .beginPath and end at .stroke()
+                ctx.arc(circleX, circleY, 50, 0, Math.PI * 2, false); //.arc(x, y, radius, startAngle, counterClockwise?)
+            ctx.stroke(); //alway start from .beginPath and end at .stroke()
+        
+            window.requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
